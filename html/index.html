@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoFlash - Educational Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="../images/userlogo.png" alt="User Profile">
+                    <div class="status-indicator online"></div>
+                </div>
+                <div class="profile-info">
+                    <h3>Alex </h3>
+                    <p>Student</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li ><a href="index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="repo.html"><i class="fas fa-book"></i> <span>Study Material</span></a></li>
+                    <li><a href="course.html"><i class="fas fa-graduation-cap"></i> <span>Courses</span></a></li>
+                    <li><a href="doubts.html"><i class="fas fa-question-circle"></i> <span>Doubts</span></a></li>
+                    <li><a href="contact.html" id="contact-link"><i class="fas fa-envelope"></i> <span>Contact Us</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="progress-container">
+                    <p>Weekly Progress</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                    <p class="progress-text">75% Completed</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <img src="../images/logo.png" alt="" class="logo">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search for courses, topics, or resources..." class="search-input">
+                    <button class="search-btn">Search</button>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="dashboard-content" id="dashboard-content">
+                <section class="welcome-section">
+                    <div class="welcome-card">
+                        <div class="welcome-text">
+                            <h1>Welcome back, Alex!</h1>
+                            <p>Continue your learning journey. You have <strong>3 tasks</strong> pending for today.</p>
+                            <button class="primary-btn">Resume Learning</button>
+                        </div>
+                        <div class="welcome-image" >
+                            <img src="../images/welcome.gif" alt="Welcome Illustration">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="flashcards-section">
+                    <div class="section-header">
+                        <h2>Create Flashcards</h2>
+                        <p>Generate study cards from your notes or text</p>
+                    </div>
+                    
+                    <div class="flashcard-creator">
+                        <div class="input-area">
+                            <textarea placeholder="Enter your study notes or text here..." id="flashcard-input"></textarea>
+                            <div class="action-buttons">
+                                <button class="secondary-btn" id="clear-btn">Clear</button>
+                                <button class="primary-btn" id="generate-btn">Generate Flashcards</button>
+                            </div>
+                        </div>
+                        
+                        <div class="flashcards-container" id="flashcards-container">
+                            <div class="empty-state">
+                                <i class="fas fa-lightbulb"></i>
+                                <p>Your flashcards will appear here</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="topics-section">
+                    <div class="section-header">
+                        <h2>Popular Topics</h2>
+                        <a href="course.html" class="view-all">View All</a>
+                    </div>
+                    
+                    <div class="topics-container">
+                        <div class="topic-tag">
+                            <i class="fas fa-calculator"></i>
+                            <span>Mathematics</span>
+                        </div>
+                        <div class="topic-tag">
+                            <i class="fas fa-flask"></i>
+                            <span>Chemistry</span>
+                        </div>
+                        <div class="topic-tag">
+                            <i class="fas fa-atom"></i>
+                            <span>Physics</span>
+                        </div>
+                        <div class="topic-tag">
+                            <i class="fas fa-dna"></i>
+                            <span>Biology</span>
+                        </div>
+                        <div class="topic-tag">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Computer Science</span>
+                        </div>
+                        <div class="topic-tag">
+                            <i class="fas fa-book"></i>
+                            <span>Literature</span>
+                        </div>
+                        <div class="topic-tag">
+                            <i class="fas fa-globe-americas"></i>
+                            <span>Geography</span>
+                        </div>
+                        <div class="topic-tag">
+                            <i class="fas fa-landmark"></i>
+                            <span>History</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="todo-section">
+                    <div class="todo-card">
+                        <div class="todo-content">
+                            <h2>Create Your To-Do List</h2>
+                            <p>Stay organized and track your study progress</p>
+                            <button class="primary-btn" id="create-todo-btn">Create Now</button>
+                        </div>
+                        <div class="todo-image">
+                            <img src="../images/todo.gif" alt="To-Do Illustration">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="upcoming-section">
+                    <div class="section-header">
+                        <h2>Upcoming Sessions</h2>
+                        <a href="#" class="view-all">View Calendar</a>
+                    </div>
+                    
+                    <div class="sessions-container">
+                        <div class="session-card">
+                            <div class="session-time">
+                                <span class="day">MON</span>
+                                <span class="date">15</span>
+                            </div>
+                            <div class="session-details">
+                                <h3>Advanced Mathematics</h3>
+                                <p><i class="fas fa-clock"></i> 10:00 AM - 11:30 AM</p>
+                                <p><i class="fas fa-user"></i> Prof. Sarah Williams</p>
+                            </div>
+                            <button class="join-btn">Join</button>
+                        </div>
+                        
+                        <div class="session-card">
+                            <div class="session-time">
+                                <span class="day">WED</span>
+                                <span class="date">17</span>
+                            </div>
+                            <div class="session-details">
+                                <h3>Physics Lab</h3>
+                                <p><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                                <p><i class="fas fa-user"></i> Dr. Robert Chen</p>
+                            </div>
+                            <button class="join-btn">Join</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            
+    <!-- Todo Modal -->
+    <div class="modal" id="todo-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create To-Do List</h2>
+                <button class="close-btn" id="close-todo-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="todo-input-group">
+                    <input type="text" id="todo-input" placeholder="Add a new task...">
+                    <button id="add-todo-btn">Add</button>
+                </div>
+                <ul class="todo-list" id="todo-list"></ul>
+            </div>
+            <div class="modal-footer">
+                <button class="secondary-btn" id="clear-todos-btn">Clear All</button>
+                <button class="primary-btn" id="save-todos-btn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/flashcard.js"></script>
+</body>
+</html>

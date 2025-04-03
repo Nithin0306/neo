@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoFlash - Doubts</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/repo.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="../images/userlogo.png" alt="User Profile">
+                    <div class="status-indicator online"></div>
+                </div>
+                <div class="profile-info">
+                    <h3>Alex</h3>
+                    <p>Student</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li class="active"><a href="repo.html"><i class="fas fa-book"></i> <span>Study Material</span></a></li>
+                    <li><a href="course.html"><i class="fas fa-graduation-cap"></i> <span>Courses</span></a></li>
+                    <li ><a href="doubts.html"><i class="fas fa-question-circle"></i> <span>Doubts</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> <span>Contact Us</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="progress-container">
+                    <p>Weekly Progress</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                    <p class="progress-text">75% Completed</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <img src="../images/logo.png" alt="" class="logo">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search for courses, topics, or resources..." class="search-input">
+                    <button class="search-btn">Search</button>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Repo Part -->
+             <div class="container">
+    <div class="reposearch-container">
+      <input type="text" class="reposearch-input" placeholder="Search for subjects, topics, or resources..." id="searchInput">
+      <button class="search-button" onclick="search()">Search</button>
+    </div>
+    
+    <div class="quick-links">
+      <a href="#ncert" class="quick-link">NCERT</a>
+      <a href="#tnboard" class="quick-link">TN State Board</a>
+      <a href="#jee" class="quick-link">JEE</a>
+      <a href="#neet" class="quick-link">NEET</a>
+      <a href="#upsc" class="quick-link">UPSC</a>
+      <a href="#reference" class="quick-link">Reference Materials</a>
+    </div>
+    
+    <div class="subject-tabs">
+      <button class="subject-tab active" onclick="filterSubject('all')">All</button>
+      <button class="subject-tab" onclick="filterSubject('physics')">Physics</button>
+      <button class="subject-tab" onclick="filterSubject('chemistry')">Chemistry</button>
+      <button class="subject-tab" onclick="filterSubject('mathematics')">Mathematics</button>
+      <button class="subject-tab" onclick="filterSubject('biology')">Biology</button>
+      <button class="subject-tab" onclick="filterSubject('social')">Social Studies</button>
+    </div>
+    
+    <h2 id="ncert">NCERT Resources</h2>
+    <div class="card-container">
+      <div class="card" data-subject="all physics chemistry mathematics biology social">
+        <div class="card-header">
+          <h3>Official NCERT Portal</h3>
+        </div>
+        <div class="card-body">
+          <p>Access official NCERT textbooks, exemplar problems, and supplementary materials.</p>
+          <ul class="resource-list">
+            <li><a href="https://ncert.nic.in/textbook.php" class="resource-link" onclick="showModal('NCERT eBooks', 'Access free PDF versions of all NCERT textbooks from Class 1 to Class 12.')">NCERT eBooks</a> <span class="badge">Free</span></li>
+            <li><a href="https://ncert.nic.in/exemplar-problems.php" class="resource-link" onclick="showModal('NCERT Exemplar', 'Advanced problems designed to deepen understanding of concepts.')">NCERT Exemplar</a></li>
+            <li><a href="https://ncert.nic.in/" class="resource-link" onclick="showModal('NCERT Official', 'The official NCERT website with comprehensive educational resources.')">NCERT Official Website</a></li>
+            <li><a href="https://diksha.gov.in/" class="resource-link" onclick="showModal('DIKSHA Portal', 'NCERT\'s digital infrastructure for providing quality e-learning content.')">DIKSHA Portal</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card" data-subject="all physics chemistry mathematics">
+        <div class="card-header">
+          <h3>NCERT Solutions</h3>
+        </div>
+        <div class="card-body">
+          <p>Step-by-step solutions to NCERT textbook problems for better understanding.</p>
+          <ul class="resource-list">
+            <li><a href="https://www.learncbse.in/ncert-solutions-for-class-12/" class="resource-link" onclick="showModal('Class 11-12 Solutions', 'Detailed solutions for senior secondary classes aligned with CBSE curriculum.')">Class 11-12 Solutions</a></li>
+            <li><a href="https://www.learncbse.in/ncert-solutions-for-class-10/" class="resource-link" onclick="showModal('Class 9-10 Solutions', 'Comprehensive explanations for secondary class questions.')">Class 9-10 Solutions</a></li>
+            <li><a href="https://www.youtube.com/c/NCERTOfficial" class="resource-link" onclick="showModal('Interactive Solutions', 'Video explanations and interactive content for complex problems.')">Interactive Solutions</a> <span class="badge">New</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card" data-subject="all physics chemistry mathematics biology">
+        <div class="card-header">
+          <h3>NCERT Video Lectures</h3>
+        </div>
+        <div class="card-body">
+          <p>Video explanations of NCERT chapters by expert teachers.</p>
+          <ul class="resource-list">
+            <li><a href="https://swayam.gov.in/" class="resource-link" onclick="showModal('SWAYAM Portal', 'Government initiative offering online courses and lectures based on NCERT curriculum.')">SWAYAM Portal</a></li>
+            <li><a href="https://nptel.ac.in/" class="resource-link" onclick="showModal('NPTEL Courses', 'High-quality engineering and science courses that supplement NCERT content.')">NPTEL Courses</a></li>
+            <li><a href="https://www.pmevidya.education.gov.in/" class="resource-link" onclick="showModal('PM eVIDYA Channels', 'Educational TV channels with structured curriculum-based content.')">PM eVIDYA Channels</a> <span class="badge">Free</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <h2 id="tnboard">Tamil Nadu State Board Resources</h2>
+    <div class="card-container">
+      <div class="card state-board" data-subject="all physics chemistry mathematics biology social">
+        <div class="card-header">
+          <h3>TN Textbook Corporation</h3>
+        </div>
+        <div class="card-body">
+          <p>Official textbooks and study materials from Tamil Nadu Textbook and Educational Services Corporation.</p>
+          <ul class="resource-list">
+            <li><a href="https://www.textbooksonline.tn.nic.in/" class="resource-link" onclick="showModal('TN Textbooks', 'Official website for Tamil Nadu textbooks with downloadable content.')">TN Textbooks Online</a> <span class="badge">Free</span></li>
+            <li><a href="https://www.tntextbooks.in/" class="resource-link" onclick="showModal('Samacheer Kalvi', 'Standardized TN State Board curriculum materials.')">Samacheer Kalvi Books</a></li>
+            <li><a href="https://www.dge.tn.gov.in/" class="resource-link" onclick="showModal('TN Model Papers', 'Previous years\' question papers with solutions.')">Model Question Papers</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card state-board" data-subject="all physics chemistry mathematics biology">
+        <div class="card-header">
+          <h3>TN Board Exam Resources</h3>
+        </div>
+        <div class="card-body">
+          <p>Preparation materials for Tamil Nadu State Board examinations.</p>
+          <ul class="resource-list">
+            <li><a href="https://www.dge.tn.gov.in/previousquestionpapers" class="resource-link" onclick="showModal('Previous Year Papers', 'Collection of past examination papers for all subjects.')">Previous Year Papers</a></li>
+            <li><a href="https://www.tnschools.gov.in/important-questions" class="resource-link" onclick="showModal('Important Questions', 'Curated list of frequently asked and important questions for board exams.')">Important Questions</a> <span class="badge">Updated</span></li>
+            <li><a href="https://www.samacheerkalvi.guru/" class="resource-link" onclick="showModal('Score Boosters', 'Last-minute revision notes and quick reference materials.')">Score Boosters</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card state-board" data-subject="all physics chemistry mathematics biology social">
+        <div class="card-header">
+          <h3>TN Supplementary Resources</h3>
+        </div>
+        <div class="card-body">
+          <p>Additional learning materials to complement the Tamil Nadu State Board curriculum.</p>
+          <ul class="resource-list">
+            <li><a href="https://kalvitholaikatchi.com/" class="resource-link" onclick="showModal('Kalvi TV', 'Educational television channel dedicated to TN State Board curriculum.')">Kalvi TV Resources</a> <span class="badge">Free</span></li>
+            <li><a href="https://tnschools.gov.in/elearn" class="resource-link" onclick="showModal('E-learn Portal', 'Interactive online learning platform for TN students.')">E-learn Portal</a></li>
+            <li><a href="https://www.kalviseithi.net/" class="resource-link" onclick="showModal('Tamil Medium Resources', 'Study materials specifically for Tamil medium students.')">Tamil Medium Resources</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <h2 id="jee">JEE Preparation Resources</h2>
+    <div class="card-container">
+      <div class="card jee-neet" data-subject="all physics chemistry mathematics">
+        <div class="card-header">
+          <h3>JEE Main Resources</h3>
+        </div>
+        <div class="card-body">
+          <p>Comprehensive study materials for JEE Main preparation.</p>
+          <ul class="resource-list">
+            <li><a href="https://jeemain.nta.nic.in/" class="resource-link" onclick="showModal('NTA JEE Portal', 'Official National Testing Agency portal for JEE Main examination.')">NTA JEE Official Portal</a></li>
+            <li><a href="https://www.nta.ac.in/Download/MockTest" class="resource-link" onclick="showModal('JEE Main Mock Tests', 'Full-length practice tests with detailed solutions and analysis.')">JEE Main Mock Tests</a> <span class="badge">Updated</span></li>
+            <li><a href="https://jeemain.nta.nic.in/syllabus/" class="resource-link" onclick="showModal('JEE Main Syllabus', 'Detailed chapter-wise syllabus and weightage analysis.')">Syllabus & Chapter Weightage</a></li>
+            <li><a href="https://jeemain.nta.nic.in/previous-papers/" class="resource-link" onclick="showModal('Previous Papers', 'Last 10 years\' JEE Main question papers with solutions.')">Previous Papers with Solutions</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card jee-neet" data-subject="all physics chemistry mathematics">
+        <div class="card-header">
+          <h3>JEE Advanced Resources</h3>
+        </div>
+        <div class="card-body">
+          <p>Advanced level preparation materials for JEE Advanced aspirants.</p>
+          <ul class="resource-list">
+            <li><a href="https://jeeadv.ac.in/" class="resource-link" onclick="showModal('IIT JEE Portal', 'Official portal for JEE Advanced examination conducted by IITs.')">IIT JEE Advanced Official Portal</a></li>
+            <li><a href="https://www.iitm.ac.in/academics/academic-courses/jee-advanced" class="resource-link" onclick="showModal('Advanced Problem Bank', 'Collection of challenging problems for JEE Advanced preparation.')">Advanced Problem Bank</a></li>
+            <li><a href="https://jeeadv.ac.in/past-question-papers.html" class="resource-link" onclick="showModal('Previous Papers', 'Past 15 years\' JEE Advanced question papers with detailed solutions.')">Previous Papers Archive</a></li>
+            <li><a href="https://www.iitb.ac.in/en/education/jee-advanced" class="resource-link" onclick="showModal('Advanced Study Material', 'Topic-wise study material for each subject at JEE Advanced level.')">Advanced Study Material</a> <span class="badge">Premium</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card jee-neet" data-subject="all physics chemistry mathematics">
+        <div class="card-header">
+          <h3>JEE Video Lectures</h3>
+        </div>
+        <div class="card-body">
+          <p>Video courses and lectures by top JEE educators and institutes.</p>
+          <ul class="resource-list">
+            <li><a href="https://www.youtube.com/c/IITDelhi" class="resource-link" onclick="showModal('IIT Professor Lectures', 'Video lectures by professors from various IITs.')">IIT Professor Lectures</a> <span class="badge">Free</span></li>
+            <li><a href="https://unacademy.com/goal/jee-main-and-advanced/TMUVD" class="resource-link" onclick="showModal('Concept Videos', 'Topic-wise concept explanation videos for JEE preparation.')">Concept Videos</a></li>
+            <li><a href="https://www.youtube.com/c/physicswallah" class="resource-link" onclick="showModal('Problem Solving Sessions', 'Live and recorded problem-solving sessions for difficult JEE topics.')">Problem Solving Sessions</a></li>
+            <li><a href="https://www.vedantu.com/jee/revision" class="resource-link" onclick="showModal('Quick Revision Series', 'Short videos for quick revision before exams.')">Quick Revision Series</a> <span class="badge">New</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <h2 id="neet">NEET Preparation Resources</h2>
+    <div class="card-container">
+      <div class="card jee-neet" data-subject="all biology physics chemistry">
+        <div class="card-header">
+          <h3>NEET Official Resources</h3>
+        </div>
+        <div class="card-body">
+          <p>Official study materials and resources for NEET preparation.</p>
+          <ul class="resource-list">
+            <li><a href="https://neet.nta.nic.in/" class="resource-link" onclick="showModal('NTA NEET Portal', 'Official National Testing Agency portal for NEET examination.')">NTA NEET Official Portal</a></li>
+            <li><a href="https://neet.nta.nic.in/information-bulletin/" class="resource-link" onclick="showModal('NEET Syllabus', 'Complete chapter-wise syllabus with marking scheme and distribution.')">NEET Syllabus & Pattern</a></li>
+            <li><a href="https://neet.nta.nic.in/previous-year-question-papers/" class="resource-link" onclick="showModal('Previous Question Papers', 'Collection of past NEET examination papers with solutions.')">Previous Question Papers</a> <span class="badge">Updated</span></li>
+            <li><a href="https://www.nta.ac.in/Download/ExamSpecificResources/NEET" class="resource-link" onclick="showModal('Chapter-wise MCQs', 'Extensive collection of MCQs organized by chapter and topic.')">Chapter-wise MCQs</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card jee-neet" data-subject="all biology physics chemistry">
+        <div class="card-header">
+          <h3>NEET Study Materials</h3>
+        </div>
+        <div class="card-body">
+          <p>Comprehensive study materials covering the entire NEET syllabus.</p>
+          <ul class="resource-list">
+            <li><a href="https://byjus.com/neet/biology-notes/" class="resource-link" onclick="showModal('Biology Notes', 'Detailed notes covering Botany and Zoology for NEET.')">Biology Complete Notes</a></li>
+            <li><a href="https://www.vedantu.com/formula/physics-formulas-for-neet" class="resource-link" onclick="showModal('Physics Formulas', 'Compilation of all important formulas and concepts for NEET Physics.')">Physics Formula Handbook</a> <span class="badge">Popular</span></li>
+            <li><a href="https://www.aakash.ac.in/important-concepts/chemistry" class="resource-link" onclick="showModal('Chemistry Revision', 'Quick revision notes for Organic, Inorganic, and Physical Chemistry.')">Chemistry Revision Notes</a></li>
+            <li><a href="https://www.embibe.com/exams/ncert-for-neet/" class="resource-link" onclick="showModal('NCERT-NEET Connection', 'Study material highlighting the connection between NCERT and NEET questions.')">NCERT-NEET Connection</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card jee-neet" data-subject="all biology physics chemistry">
+        <div class="card-header">
+          <h3>NEET Practice Resources</h3>
+        </div>
+        <div class="card-body">
+          <p>Practice materials and test series for NEET preparation.</p>
+          <ul class="resource-list">
+            <li><a href="https://www.nta.ac.in/MockTest" class="resource-link" onclick="showModal('NEET Mock Tests', 'Full-length mock tests simulating the actual NEET exam environment.')">NEET Mock Test Series</a></li>
+            <li><a href="https://www.education.gov.in/archives-aiims-jipmer" class="resource-link" onclick="showModal('AIIMS & JIPMER Archive', 'Previous papers from AIIMS and JIPMER exams that are now part of NEET.')">AIIMS & JIPMER Archive</a></li>
+            <li><a href="https://www.neetprep.com/practice-questions" class="resource-link" onclick="showModal('Daily Practice Questions', 'Daily MCQ practice sets with detailed explanations.')">Daily Practice Questions</a> <span class="badge">Free</span></li>
+            <li><a href="https://www.allen.ac.in/neet-ug/test-series" class="resource-link" onclick="showModal('Topic Tests', 'Short tests focusing on specific topics for targeted practice.')">Topic-wise Tests</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h2 id="upsc">UPSC Preparation Resources</h2>
+    <div class="card-container">
+  <div class="card" data-subject="all social">
+    <div class="card-header" style="background-color: #8B5CF6;">
+      <h3>UPSC Official Resources</h3>
+    </div>
+    <div class="card-body">
+      <p>Official study materials and resources for UPSC Civil Services examination preparation.</p>
+      <ul class="resource-list">
+        <li><a href="https://upsc.gov.in/" class="resource-link" onclick="showModal('UPSC Official Portal', 'Official Union Public Service Commission portal for Civil Services examination and notifications.')">UPSC Official Portal</a></li>
+        <li><a href="https://upsc.gov.in/examinations/previous-question-papers" class="resource-link" onclick="showModal('Previous Year Papers', 'Collection of past UPSC examination papers for Prelims and Mains.')">Previous Year Papers</a> <span class="badge">Updated</span></li>
+        <li><a href="https://upsc.gov.in/syllabus" class="resource-link" onclick="showModal('UPSC Syllabus', 'Detailed syllabus for Prelims, Mains, and Optional subjects.')">Complete Syllabus</a></li>
+        <li><a href="https://upsc.gov.in/sites/default/files/cutyoff-csp.pdf" class="resource-link" onclick="showModal('Cut-off Marks', 'Previous years cut-off marks for different categories and stages.')">Cut-off Analysis</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card" data-subject="all social">
+    <div class="card-header" style="background-color: #8B5CF6;">
+      <h3>UPSC Prelims Resources</h3>
+    </div>
+    <div class="card-body">
+      <p>Specialized resources for UPSC Preliminary Examination preparation.</p>
+      <ul class="resource-list">
+        <li><a href="https://www.clearias.com/upsc-prelims/" class="resource-link" onclick="showModal('Prelims Study Material', 'Comprehensive study material for General Studies Paper I and CSAT.')">Prelims Study Material</a></li>
+        <li><a href="https://www.drishtiias.com/current-affairs-news-analysis" class="resource-link" onclick="showModal('Current Affairs', 'Daily, weekly, and monthly current affairs compilations for Prelims.')">Current Affairs Compilation</a> <span class="badge">Daily Updated</span></li>
+        <li><a href="https://www.visionias.in/resources/test_series.php" class="resource-link" onclick="showModal('Prelims Test Series', 'Full-length and sectional mock tests for Prelims preparation.')">Prelims Test Series</a></li>
+        <li><a href="https://www.insightsonindia.com/upsc-prelims-answer-key/" class="resource-link" onclick="showModal('Question Bank', 'Extensive collection of MCQs organized by subjects and topics.')">Topic-wise Question Bank</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card" data-subject="all social">
+    <div class="card-header" style="background-color: #8B5CF6;">
+      <h3>UPSC Mains Resources</h3>
+    </div>
+    <div class="card-body">
+      <p>Comprehensive resources for UPSC Mains Examination preparation.</p>
+      <ul class="resource-list">
+        <li><a href="https://www.insightsonindia.com/upsc-mains-answer-writing-practice/" class="resource-link" onclick="showModal('Answer Writing Practice', 'Daily answer writing practice with expert evaluation and feedback.')">Answer Writing Practice</a> <span class="badge">Essential</span></li>
+        <li><a href="https://www.civilsdaily.com/mains-answer-writing-evaluation/" class="resource-link" onclick="showModal('Essay Practice', 'Essay writing practice with structured frameworks and sample essays.')">Essay Writing Resources</a></li>
+        <li><a href="https://www.mrunal.org/mains-strategy" class="resource-link" onclick="showModal('GS Paper Strategy', 'Detailed strategy for all General Studies papers with topic-wise approach.')">GS Papers Strategy</a></li>
+        <li><a href="https://www.iasbaba.com/upsc-mains-optional-subjects/" class="resource-link" onclick="showModal('Optional Subjects', 'Resources for all optional subjects with booklists and strategy.')">Optional Subjects Guide</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card-container">
+  <div class="card" data-subject="all social">
+    <div class="card-header" style="background-color: #8B5CF6;">
+      <h3>UPSC Interview Resources</h3>
+    </div>
+    <div class="card-body">
+      <p>Resources for the Personality Test (Interview) stage of the UPSC examination.</p>
+      <ul class="resource-list">
+        <li><a href="https://www.insights.upscpathshala.com/upsc-interview-questions/" class="resource-link" onclick="showModal('Interview Questions', 'Compilation of actual interview questions asked in previous years.')">Previous Interview Questions</a></li>
+        <li><a href="https://www.forumias.com/portal/interview-guidance/" class="resource-link" onclick="showModal('Mock Interviews', 'Mock interview sessions with detailed feedback and improvement areas.')">Mock Interview Sessions</a> <span class="badge">Premium</span></li>
+        <li><a href="https://www.iasgyan.in/blogs/upsc-interview-preparation" class="resource-link" onclick="showModal('DAF Analysis', 'Guidelines for preparing Detailed Application Form-based questions.')">DAF Analysis Guide</a></li>
+        <li><a href="https://www.ias4sure.com/wikiupsc/art-of-presenting-yourself-during-upsc-interview/" class="resource-link" onclick="showModal('Presentation Tips', 'Tips for effective communication and presentation during interview.')">Interview Presentation Tips</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card" data-subject="all social">
+    <div class="card-header" style="background-color: #8B5CF6;">
+      <h3>UPSC Reference Books</h3>
+    </div>
+    <div class="card-body">
+      <p>Essential reference books and reading materials for UPSC preparation.</p>
+      <ul class="resource-list">
+        <li><a href="https://www.amazon.in/books/s?k=upsc+booklist" class="resource-link" onclick="showModal('Basic Books', 'Foundation books for beginners starting UPSC preparation.')">Basic NCERT-based Books</a></li>
+        <li><a href="https://www.amazon.in/books/s?k=upsc+advanced" class="resource-link" onclick="showModal('Advanced References', 'Topic-specific advanced reference books for deeper understanding.')">Advanced References</a> <span class="badge">Recommended</span></li>
+        <li><a href="https://www.amazon.in/books/s?k=upsc+optional+subjects" class="resource-link" onclick="showModal('Optional Subject Books', 'Specialized books for various optional subjects offered in UPSC.')">Optional Subject Books</a></li>
+        <li><a href="https://www.amazon.in/books/s?k=upsc+previous+year+solved" class="resource-link" onclick="showModal('Year-wise Solutions', 'Previous years question papers with detailed explanations and solutions.')">Year-wise Solutions</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card" data-subject="all social">
+    <div class="card-header" style="background-color: #8B5CF6;">
+      <h3>UPSC Study Strategies</h3>
+    </div>
+    <div class="card-body">
+      <p>Effective study strategies and planning resources for UPSC aspirants.</p>
+      <ul class="resource-list">
+        <li><a href="https://www.clearias.com/upsc-study-plan/" class="resource-link" onclick="showModal('Study Planner', 'Customizable study planners for different preparation durations.')">Study Planner Templates</a> <span class="badge">Free</span></li>
+        <li><a href="https://www.drishtiias.com/upsc-exam-strategy" class="resource-link" onclick="showModal('Toppers Strategy', 'Compilation of strategies shared by previous UPSC toppers.')">Toppers' Strategies</a></li>
+        <li><a href="https://www.insightsonindia.com/upsc-mains-integrated-approach/" class="resource-link" onclick="showModal('Integrated Approach', 'Framework for integrated preparation of Prelims and Mains simultaneously.')">Integrated Approach</a></li>
+        <li><a href="https://www.nextias.com/upsc-preparation-with-job/" class="resource-link" onclick="showModal('Part-Time Strategy', 'Preparation strategy for working professionals and part-time aspirants.')">Part-Time Preparation Strategy</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    <h2 id="reference">Reference Materials & Additional Resources</h2>
+    <div class="card-container">
+      <div class="card reference" data-subject="all physics chemistry mathematics">
+        <div class="card-header">
+          <h3>Reference Books</h3>
+        </div>
+        <div class="card-body">
+          <p>Recommended reference books for deeper understanding of concepts.</p>
+          <ul class="resource-list">
+            <li><a href="https://www.amazon.in/physics-textbooks/s?k=physics+textbooks" class="resource-link" onclick="showModal('Physics Books', 'List of recommended physics reference books for various exams.')">Physics References</a></li>
+            <li><a href="https://www.amazon.in/chemistry-textbooks/s?k=chemistry+textbooks" class="resource-link" onclick="showModal('Chemistry Books', 'Essential chemistry books for comprehensive preparation.')">Chemistry References</a></li>
+            <li><a href="https://www.amazon.in/mathematics-textbooks/s?k=mathematics+textbooks" class="resource-link" onclick="showModal('Mathematics Books', 'Advanced mathematics books for competitive exam preparation.')">Mathematics References</a></li>
+            <li><a href="https://www.amazon.in/biology-textbooks/s?k=biology+textbooks" class="resource-link" onclick="showModal('Biology Books', 'Recommended biology books covering botany and zoology.')">Biology References</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card reference" data-subject="all physics chemistry mathematics biology">
+        <div class="card-header">
+          <h3>Online Learning Platforms</h3>
+        </div>
+        <div class="card-body">
+          <p>Quality online platforms offering courses for NCERT, Board exams, JEE, and NEET.</p>
+          <ul class="resource-list">
+            <li><a href="https://www.khanacademy.org/" class="resource-link" onclick="showModal('Free Platforms', 'Collection of free educational platforms and resources.')">Free Educational Platforms</a> <span class="badge">Free</span></li>
+            <li><a href="https://www.udemy.com/courses/teaching-and-academics/test-prep/" class="resource-link" onclick="showModal('Premium Courses', 'Curated list of premium online courses for competitive exams.')">Premium Courses</a></li>
+            <li><a href="https://www.youtube.com/results?search_query=education+india" class="resource-link" onclick="showModal('Video Libraries', 'Extensive video libraries covering various educational topics.')">Video Libraries</a></li>
+            <li><a href="https://www.coursera.org/in" class="resource-link" onclick="showModal('Interactive Learning', 'Platforms offering interactive learning experiences.')">Interactive Learning</a> <span class="badge">Trending</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card reference" data-subject="all physics chemistry mathematics biology social">
+        <div class="card-header">
+          <h3>Study Tools & Techniques</h3>
+        </div>
+        <div class="card-body">
+          <p>Effective study tools and techniques to enhance learning efficiency.</p>
+          <ul class="resource-list">
+            <li><a href="https://www.mindtools.com/pages/article/revision-strategies.htm" class="resource-link" onclick="showModal('Revision Techniques', 'Effective methods for quick and thorough revision.')">Revision Techniques</a></li>
+            <li><a href="https://www.verywellmind.com/memory-improvement-techniques-2795370" class="resource-link" onclick="showModal('Memory Techniques', 'Memory enhancement techniques for better retention.')">Memory Techniques</a> <span class="badge">Popular</span></li>
+            <li><a href="https://todoist.com/productivity-methods/pomodoro-technique" class="resource-link" onclick="showModal('Study Planners', 'Customizable study planners for various exams and time frames.')">Study Planners</a></li>
+            <li><a href="https://www.notion.so/templates/categories/studying" class="resource-link" onclick="showModal('Digital Tools', 'Digital tools and apps to enhance study efficiency.')">Digital Study Tools</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">Resource Title</h2>
+      <p id="modalDescription">Resource description goes here.</p>
+      <p style="margin-top: 20px;">
+    </div>
+</div>
+
+
+           
+        </main>
+    </div>
+
+    <script src="../js/repo.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoFlash - Contact Us</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="../images/userlogo.png" alt="User Profile">
+                    <div class="status-indicator online"></div>
+                </div>
+                <div class="profile-info">
+                    <h3>Alex </h3>
+                    <p>Student</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="repo.html"><i class="fas fa-book"></i> <span>Study Material</span></a></li>
+                    <li class="active"><a href="course.html"><i class="fas fa-graduation-cap"></i> <span>Courses</span></a></li>
+                    <li><a href="doubts.html"><i class="fas fa-question-circle"></i> <span>Doubts</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> <span>Contact Us</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="progress-container">
+                    <p>Weekly Progress</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                    <p class="progress-text">75% Completed</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <img src="../images/logo.png" alt="" class="logo">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search for courses, topics, or resources..." class="search-input">
+                    <button class="search-btn">Search</button>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Back Button -->
+            <button class="back-button" id="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Courses
+            </button>
+
+            <!-- iframe for YouTube playlists -->
+            <iframe id="playlist-iframe" class="content-iframe" allowfullscreen></iframe>
+
+            <!-- Course Content -->
+            <section class="courses" id="courses-section">
+                <h1 class="heading">our courses</h1>
+                <div class="box-container">
+                    <div class="box">
+                        <div class="tutor">
+                            <img src="../images/teluskologo.png" alt="">
+                            <div class="info">
+                                <h3>Telusko</h3>
+                            </div>
+                        </div>
+                        <div class="thumb">
+                            <img src="../images/javacover.png" alt="">
+                            <span>10 videos</span>
+                        </div>
+                        <h3 class="title">complete JAVA tutorial</h3>
+                        <a href="#" class="inline-btn playlist-btn" data-playlist="https://www.youtube.com/embed/videoseries?list=PLsyeobzWxl7pe_IiTfNyr55kwJPWbgxB5">view playlist</a>
+
+                    </div>
+
+                    <div class="box">
+                        <div class="tutor">
+                            <img src="../images/mplogo.png" alt="">
+                            <div class="info">
+                                <h3>For the Love of Physics</h3>
+                            </div>
+                        </div>
+                        <div class="thumb">
+                            <img src="../images/mpcover.png" alt="">
+                            <span>10 videos</span>
+                        </div>
+                        <h3 class="title">complete Modern Physics Playlist</h3>
+                        <a href="#" class="inline-btn playlist-btn" data-playlist="https://www.youtube.com/embed/videoseries?list=PLRN3HroZGu2mCtdalEmZAM2nr1xBWAtUn">view playlist</a>
+
+                    </div>
+
+                    <div class="box">
+                        <div class="tutor">
+                            <img src="../images/prodavelogo.png" alt="">
+                            <div class="info">
+                                <h3>Professor Dave Explains</h3>
+                            </div>
+                        </div>
+                        <div class="thumb">
+                            <img src="../images/lacover.png" alt="">
+                            <span>10 videos</span>
+                        </div>
+                        <h3 class="title">complete Linear Algebra Playlist</h3>
+                        <a href="#" class="inline-btn playlist-btn" data-playlist="https://www.youtube.com/embed/videoseries?list=PLybg94GvOJ9En46TNCXL2n6SiqRc_iMB8">view playlist</a>
+
+                    </div>
+
+                    <div class="box">
+                        <div class="tutor">
+                            <img src="../images/discretlogo.png" alt="">
+                            <div class="info">
+                                <h3>Discrete Maths</h3>
+                            </div>
+                        </div>
+                        <div class="thumb">
+                            <img src="../images/discretecover.png" alt="">
+                            <span>10 videos</span>
+                        </div>
+                        <h3 class="title">Discrete Mathematics Playlist</h3>
+                        <a href="#" class="inline-btn playlist-btn" data-playlist="https://www.youtube.com/embed/videoseries?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz">view playlist</a>
+                    </div>
+
+                    <div class="box">
+                        <div class="tutor">
+                            <img src="../images/teluskologo.png" alt="">
+                            <div class="info">
+                                <h3>Telusko</h3>
+                            </div>
+                        </div>
+                        <div class="thumb">
+                            <img src="../images/javacover.png" alt="">
+                            <span>10 videos</span>
+                        </div>
+                        <h3 class="title">complete JAVA tutorial</h3>
+                        <a href="#" class="inline-btn playlist-btn" data-playlist="https://www.youtube.com/embed/videoseries?list=PLsyeobzWxl7pe_IiTfNyr55kwJPWbgxB5">view playlist</a>
+
+                    </div>
+
+                    <div class="box">
+                        <div class="tutor">
+                            <img src="../images/mplogo.png" alt="">
+                            <div class="info">
+                                <h3>For the Love of Physics</h3>
+                            </div>
+                        </div>
+                        <div class="thumb">
+                            <img src="../images/mpcover.png" alt="">
+                            <span>10 videos</span>
+                        </div>
+                        <h3 class="title">complete Modern Physics Playlist</h3>
+                        <a href="#" class="inline-btn playlist-btn" data-playlist="https://www.youtube.com/embed/videoseries?list=PLRN3HroZGu2mCtdalEmZAM2nr1xBWAtUn">view playlist</a>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

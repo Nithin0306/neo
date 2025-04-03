@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoFlash - Doubts</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/doubts.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="../images/userlogo.png" alt="User Profile">
+                    <div class="status-indicator online"></div>
+                </div>
+                <div class="profile-info">
+                    <h3>Alex</h3>
+                    <p>Student</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="repo.html"><i class="fas fa-book"></i> <span>Study Material</span></a></li>
+                    <li><a href="course.html"><i class="fas fa-graduation-cap"></i> <span>Courses</span></a></li>
+                    <li class="active"><a href="doubts.html"><i class="fas fa-question-circle"></i> <span>Doubts</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> <span>Contact Us</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="progress-container">
+                    <p>Weekly Progress</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                    <p class="progress-text">75% Completed</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <img src="../images/logo.png" alt="" class="logo">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search for courses, topics, or resources..." class="search-input">
+                    <button class="search-btn">Search</button>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <section class="doubts-section">
+                <div class="welcome-card">
+                    <h2>Welcome to Doubts Resolver</h2>
+                    <p>Ask any question related to your studies, and get instant answers powered by advanced AI.</p>
+                </div>
+
+                <div class="doubt-input-container">
+                    <div class="input-wrapper">
+                        <i class="fas fa-question-circle input-icon"></i>
+                        <input type="text" id="doubt-input" placeholder="Type your question here..." class="doubt-input">
+                    </div>
+                    <button id="submit-doubt" class="submit-btn">Ask Now</button>
+                </div>
+
+                <div class="response-container" id="response-container">
+                    <!-- Responses will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/doubts.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
