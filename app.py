@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyDGa6m8cg8ujE1o1BIMSvKgHCMM8m59W0Y")  # Replace with your actual Gemini API key
+genai.configure(api_key="YOUR_API_KEY")  # Replace with your actual Gemini API key
 model = genai.GenerativeModel('gemini-1.5-pro')
 
 def summarize_text(text):
